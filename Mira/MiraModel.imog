@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<imogene:Project xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:imogene="http://www.i-mogene.org/imogene/1.0" name="MiraModel">
+  <description display="MIRA" help="" locale="en"/>
+  <entities name="Mira" shortName="A" columnFields="//@entities.0/@groups.0/@fields.6 //@entities.0/@groups.0/@fields.0 //@entities.0/@groups.0/@fields.1 //@entities.0/@groups.0/@fields.7 //@entities.0/@groups.0/@fields.2" mainFields="//@entities.0/@groups.0/@fields.6" color="3399ff" creators="//@roles.0 //@roles.1">
+    <descriptions display="Multi-Cluster Inital Rapid Assessment" locale="en"/>
+    <groups name="Summary" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="AA">
+      <descriptions display="Key Informant Interview" locale="en"/>
+      <fields xsi:type="imogene:DateField" name="SurveyDate" shortName="AAA" required="true">
+        <descriptions display="Survey date" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="SurveyTeam" shortName="AAB" entity="SurveyTeam" cardinality="1">
+        <descriptions display="Team number" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:GeoField" name="GpsCoords" shortName="AAH">
+        <descriptions display="GPS coordinates" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="DistrictName" shortName="AAC" entity="District" cardinality="1">
+        <descriptions display="District" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="TehsilName" shortName="AAD" entity="Tehsil" cardinality="1">
+        <descriptions display="Tehsil" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="UnionCouncilName" shortName="AAE" required="true" entity="UnionCouncil" cardinality="1">
+        <descriptions display="Union Council" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="VillageName" shortName="AAF">
+        <descriptions display="Village/city/site name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:EnumField" name="SettlementType" shortName="AAG">
+        <descriptions display="Type of settlement" locale="en"/>
+        <enumValues value="1" name="CityVillage">
+          <descriptions display="City/Village" locale="en"/>
+        </enumValues>
+        <enumValues value="2" name="OrganisedCamp">
+          <descriptions display="Organised tented camp" locale="en"/>
+        </enumValues>
+        <enumValues value="3" name="SpontaneousCamp">
+          <descriptions display="Spotaneous camps" locale="en"/>
+        </enumValues>
+      </fields>
+    </groups>
+    <groups name="KeyInformant" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="AB">
+      <descriptions display="Key Informant" help="" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="FirstName" shortName="ABA">
+        <descriptions display="First name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="LastName" shortName="ABB">
+        <descriptions display="Last name" help="" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:PhoneField" name="Phone" shortName="ABC">
+        <descriptions display="Phone" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="InformantPosition" shortName="ABD">
+        <descriptions display="Role of key informant in community" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:EnumField" name="Gender" shortName="ABE">
+        <descriptions display="Gender" locale="en"/>
+        <enumValues value="1" name="Male">
+          <descriptions display="Yes" locale="en"/>
+        </enumValues>
+        <enumValues value="2" name="Female">
+          <descriptions display="No" locale="en"/>
+        </enumValues>
+      </fields>
+      <fields xsi:type="imogene:EnumField" name="InformantConsent" shortName="ABF">
+        <descriptions display="Consent to share contact details" locale="en"/>
+        <enumValues value="1" name="Yes">
+          <descriptions display="Yes" locale="en"/>
+        </enumValues>
+        <enumValues name="No">
+          <descriptions display="No" locale="en"/>
+        </enumValues>
+      </fields>
+    </groups>
+    <groups name="Population" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="AC">
+      <descriptions display="Population" locale="en"/>
+      <fields xsi:type="imogene:IntegerField" name="ZeroTwoYearsMale" shortName="ACA">
+        <descriptions display="Male 0-2 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="ZeroTwoYearsFemale" shortName="ACB">
+        <descriptions display="Female 0-2 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="ZeroTwoYearsTotalPopn" shortName="ACC" hidden="true" unit="">
+        <descriptions display="Total Popn 0-2 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="ThreeYearsMale" shortName="ACD">
+        <descriptions display="Male 3-18 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="ThreeYearsFemale" shortName="ACE">
+        <descriptions display="Female 3-18 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="ThreeYearsTotalPopn" shortName="ACF" hidden="true" unit="">
+        <descriptions display="Total Popn 3-18 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="NineteenYearsMale" shortName="ACG">
+        <descriptions display="Male 19-59 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="NineteenYearsFemale" shortName="ACH">
+        <descriptions display="Female 19-59 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="NineteenYearsTotalPopn" shortName="ACI" hidden="true" unit="">
+        <descriptions display="Total Popn 19-59 yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="SixtyYearsMale" shortName="ACJ">
+        <descriptions display="Male 60+ yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="SixtyYearsFemale" shortName="ACK">
+        <descriptions display="Female 60+ yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="SixtyYearsTotalPopn" shortName="ACL" hidden="true" unit="">
+        <descriptions display="Total Popn 60+ yrs" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="TotalPopnMale" shortName="ACM" hidden="true">
+        <descriptions display="Total Popn Male" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="TotalPopnFemale" shortName="ACN" hidden="true">
+        <descriptions display="Total Popn Female" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:IntegerField" name="TotalPopn" shortName="ACO" hidden="true" unit="">
+        <descriptions display="Total Popn" help="" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities name="SurveyTeam" shortName="B" columnFields="//@entities.1/@groups.0/@fields.0 //@entities.1/@groups.0/@fields.1 //@entities.1/@groups.0/@fields.2" mainFields="//@entities.1/@groups.0/@fields.0" color="33ffcc" creators="//@roles.0 //@roles.1">
+    <descriptions display="Survey Team" locale="en"/>
+    <groups name="Description" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="BA">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:IntegerField" name="TeamNumber" shortName="BAA">
+        <descriptions display="Team number" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="Engineer" shortName="BAB" entity="Engineer" cardinality="1">
+        <descriptions display="Engineer" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:MainRelationFieldEntity" name="Enumerator" shortName="BAC" required="true" entity="Enumerator" cardinality="1">
+        <descriptions display="Enumerator" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities name="District" shortName="F" columnFields="//@entities.2/@groups.0/@fields.0" mainFields="//@entities.2/@groups.0/@fields.0" color="108FC3" creators="//@roles.0 //@roles.1">
+    <descriptions display="District" locale="en"/>
+    <groups name="Description" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="FA">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="DistrictName" shortName="FAA">
+        <descriptions display="District name" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities name="Tehsil" shortName="G" columnFields="//@entities.3/@groups.0/@fields.0" mainFields="//@entities.3/@groups.0/@fields.0" color="108FC3" creators="//@roles.0 //@roles.1">
+    <descriptions display="Tehsil" locale="en"/>
+    <groups name="Description" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="GA">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="TehsilName" shortName="GAA">
+        <descriptions display="Tehsil Name" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities name="UnionCouncil" shortName="H" columnFields="//@entities.4/@groups.0/@fields.0" mainFields="//@entities.4/@groups.0/@fields.0" color="108FC3" creators="//@roles.0 //@roles.1">
+    <descriptions display="Union Council" locale="en"/>
+    <groups name="Description" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="HA">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="UnionCouncilName" shortName="HAA">
+        <descriptions display="Union Council name" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities xsi:type="imogene:Actor" name="SysAdmin" shortName="D" columnFields="//@entities.5/@groups.0/@fields.0 //@entities.5/@groups.0/@fields.1 //@entities.5/@groups.0/@fields.2" mainFields="//@entities.5/@groups.0/@fields.0" secondaryFields="//@entities.5/@groups.0/@fields.1" color="60d491" creators="//@roles.0" adminFields="//@entities.5/@groups.0/@fields.0 //@entities.5/@groups.0/@fields.1 //@entities.5/@groups.0/@fields.2">
+    <descriptions display="System Admin" locale="en"/>
+    <groups name="SystemAdmin" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="DA" icon="">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="FirstName" shortName="DAA">
+        <descriptions display="First name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="LastName" shortName="DAB">
+        <descriptions display="Last name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:PhoneField" name="Phone" shortName="DAC">
+        <descriptions display="Phone" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities xsi:type="imogene:Actor" name="Engineer" shortName="C" columnFields="//@entities.6/@groups.0/@fields.0 //@entities.6/@groups.0/@fields.1 //@entities.6/@groups.0/@fields.3" mainFields="//@entities.6/@groups.0/@fields.0 //@entities.6/@groups.0/@fields.1 //@entities.6/@groups.0/@fields.3" color="00ccff" creators="//@roles.0" adminFields="//@entities.6/@groups.0/@fields.0 //@entities.6/@groups.0/@fields.1 //@entities.6/@groups.0/@fields.3">
+    <descriptions display="Engineer" locale="en"/>
+    <groups name="Engineer" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="CA" icon="">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="FirstName" shortName="CAA">
+        <descriptions display="First name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="LastName" shortName="CAB">
+        <descriptions display="Last name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:EnumField" name="Gender" shortName="CAC">
+        <descriptions display="Gender" locale="en"/>
+        <enumValues value="1" name="Male">
+          <descriptions display="Male" locale="en"/>
+        </enumValues>
+        <enumValues value="2" name="Female">
+          <descriptions display="Female" locale="en"/>
+        </enumValues>
+      </fields>
+      <fields xsi:type="imogene:PhoneField" name="Phone" shortName="CAD">
+        <descriptions display="Phone" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entities xsi:type="imogene:Actor" name="Enumerator" shortName="E" columnFields="//@entities.7/@groups.0/@fields.0 //@entities.7/@groups.0/@fields.1 //@entities.7/@groups.0/@fields.3" mainFields="//@entities.7/@groups.0/@fields.0 //@entities.7/@groups.0/@fields.1" icon="" color="00ccff" creators="//@roles.0" adminFields="//@entities.7/@groups.0/@fields.0 //@entities.7/@groups.0/@fields.1 //@entities.7/@groups.0/@fields.3">
+    <descriptions display="Enumerator" locale="en"/>
+    <groups name="Enumerator" readers="//@roles.0 //@roles.1" writers="//@roles.0 //@roles.1" shortName="EA" icon="">
+      <descriptions display="Description" locale="en"/>
+      <fields xsi:type="imogene:TextField" name="FirstName" shortName="EAA">
+        <descriptions display="First name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:TextField" name="LastName" shortName="EAB">
+        <descriptions display="Last name" locale="en"/>
+      </fields>
+      <fields xsi:type="imogene:EnumField" name="Gender" shortName="EAC">
+        <descriptions display="Gender" locale="en"/>
+        <enumValues value="1" name="Male">
+          <descriptions display="Male" locale="en"/>
+        </enumValues>
+        <enumValues value="2" name="Female">
+          <descriptions display="Female" locale="en"/>
+        </enumValues>
+      </fields>
+      <fields xsi:type="imogene:PhoneField" name="Phone" shortName="EAD">
+        <descriptions display="Phone" locale="en"/>
+      </fields>
+    </groups>
+  </entities>
+  <entityUIFormats entity="Mira"/>
+  <themas name="ThemaMira" entities="Mira">
+    <descriptions display="Multi-Cluster Inital Rapid Assessment" locale="en"/>
+  </themas>
+  <themas name="ThemaAdministration" entities="District Tehsil UnionCouncil">
+    <descriptions display="Administration" locale="en"/>
+  </themas>
+  <themas name="ThemaFieldTeam" entities="SurveyTeam Engineer Enumerator">
+    <descriptions display="FieldTeam" locale="en"/>
+  </themas>
+  <roles name="Admin"/>
+  <roles name="Surveyor"/>
+  <languages name="English" floatFormat="X.Y" isoCode="en"/>
+</imogene:Project>
